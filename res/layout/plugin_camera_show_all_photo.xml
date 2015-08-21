@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="#E1E0DE"
+    >
+
+    <RelativeLayout
+        android:id="@+id/showallphoto_headview"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/plugin_camera_title_bar" 
+        android:gravity="center_vertical"
+        >
+        <Button
+            android:background="@drawable/plugin_camera_title_btn_back"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="14sp"
+            android:textColor="#fff"
+            android:id="@+id/showallphoto_back"
+            android:text="相册"
+            />
+         <TextView
+            android:id="@+id/showallphoto_headtitle"
+            android:layout_width="wrap_content" 
+       		android:layout_height="wrap_content" 
+       		android:text="选择相册"
+       		android:layout_centerInParent="true"
+       		android:singleLine="true"
+       		android:textSize="20sp"		
+			android:textColor="#ffffff"
+            />
+        
+        <Button
+            android:layout_width="67dp" 
+      	    android:layout_height="wrap_content"
+      	    android:layout_alignParentRight="true" 
+      	    android:layout_centerVertical="true"
+      	    android:layout_marginRight="5dp"
+            android:id="@+id/showallphoto_cancel"
+            android:text="取消"
+            android:textColor="#fff"
+        	android:textSize="15dp"
+			android:background="@drawable/plugin_camera_title_btn_cancel"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/showallphoto_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/plugin_camera_bottom_bar" >
+
+        <Button
+            android:id="@+id/showallphoto_preview"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="预览"
+            android:background="@drawable/plugin_camera_title_btn_preview"
+            />
+        <Button
+            android:id="@+id/showallphoto_ok_button"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+             android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="预览"
+            android:background="@drawable/plugin_camera_ok_btn_state"
+            android:gravity="center"
+            />
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/showallphoto_myGrid"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/showallphoto_bottom_layout"
+        android:layout_below="@id/showallphoto_headview"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="2dp"
+        android:horizontalSpacing="10dp"
+        android:numColumns="4"
+        android:verticalSpacing="10dp"
+        android:background="#E1E0DE" />
+
+    <ProgressBar
+        android:id="@+id/showallphoto_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>
